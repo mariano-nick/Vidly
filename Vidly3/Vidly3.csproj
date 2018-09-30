@@ -225,17 +225,22 @@
     <Compile Include="Migrations\201809300440250_PopulateExplicitNamesForMembershipTypes.Designer.cs">
       <DependentUpon>201809300440250_PopulateExplicitNamesForMembershipTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809300452172_AddBirthdateToCustomer.cs" />
-    <Compile Include="Migrations\201809300452172_AddBirthdateToCustomer.Designer.cs">
-      <DependentUpon>201809300452172_AddBirthdateToCustomer.cs</DependentUpon>
+    <Compile Include="Migrations\201809300508381_AddNullableBirthdateToCustomer.cs" />
+    <Compile Include="Migrations\201809300508381_AddNullableBirthdateToCustomer.Designer.cs">
+      <DependentUpon>201809300508381_AddNullableBirthdateToCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809300454207_AddNullableAttributeToCustomerBirthdate.cs" />
-    <Compile Include="Migrations\201809300454207_AddNullableAttributeToCustomerBirthdate.Designer.cs">
-      <DependentUpon>201809300454207_AddNullableAttributeToCustomerBirthdate.cs</DependentUpon>
+    <Compile Include="Migrations\201809300557365_AddPropertiesToMovie.cs" />
+    <Compile Include="Migrations\201809300557365_AddPropertiesToMovie.Designer.cs">
+      <DependentUpon>201809300557365_AddPropertiesToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809300635475_AddGenreTypes.cs" />
+    <Compile Include="Migrations\201809300635475_AddGenreTypes.Designer.cs">
+      <DependentUpon>201809300635475_AddGenreTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -349,11 +354,14 @@
     <EmbeddedResource Include="Migrations\201809300440250_PopulateExplicitNamesForMembershipTypes.resx">
       <DependentUpon>201809300440250_PopulateExplicitNamesForMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809300452172_AddBirthdateToCustomer.resx">
-      <DependentUpon>201809300452172_AddBirthdateToCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809300508381_AddNullableBirthdateToCustomer.resx">
+      <DependentUpon>201809300508381_AddNullableBirthdateToCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809300454207_AddNullableAttributeToCustomerBirthdate.resx">
-      <DependentUpon>201809300454207_AddNullableAttributeToCustomerBirthdate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809300557365_AddPropertiesToMovie.resx">
+      <DependentUpon>201809300557365_AddPropertiesToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809300635475_AddGenreTypes.resx">
+      <DependentUpon>201809300635475_AddGenreTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
