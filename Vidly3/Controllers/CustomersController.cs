@@ -39,7 +39,7 @@ namespace Vidly3.Controllers
             return View(customer);
         }
 
-        // Get: Customers/New
+        // GET: Customers/New
         public ActionResult New()
         {
             var viewModel = new CustomerFormViewModel
@@ -51,7 +51,7 @@ namespace Vidly3.Controllers
             return View("CustomerForm", viewModel);
         }
 
-        // Get: Customer/Edit
+        // GET: Customer/Edit
         public ActionResult Edit(int Id)
         {
             var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == Id);
@@ -68,7 +68,7 @@ namespace Vidly3.Controllers
             return View("CustomerForm", viewModel);
         }
 
-        // Post: Customers/Save
+        // POST: Customers/Save
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
