@@ -46,17 +46,17 @@
             });
 
             $("#moviesTable").on("click", ".js-delete", function () {
-                var button = $(this);
+                var deleteButton = $(this);
 
                 bootbox.confirm("Are you sure you want to delete this movie?", function (result) {
                     if (result) {
-                        console.log("delete item " + button.attr("data-customer-id"));
+                        console.log("delete item " + deleteButton.attr("data-customer-id"));
                         $.ajax({
-                            url: "/api/movies/" + button.attr("data-customer-id"),
+                            url: "/api/movies/" + deleteButton.attr("data-customer-id"),
                             method: "DELETE",
                             success: function () {
-                                table.row(button.parents("tr")).remove().draw();
-                                console.log("deleted item " + button.attr("data-customer-id"));
+                                var deletedTableRow = $(deleteButton.parents("tr"))
+                                table.row(deletedTableRow).remove().draw();
                             }
                         })
                     }
