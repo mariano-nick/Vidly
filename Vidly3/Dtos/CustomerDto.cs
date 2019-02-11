@@ -12,6 +12,7 @@ namespace Vidly3.Dtos
         public int Id { get; set; }
         public bool IsSubscribedToNewsletter { get; set; }
         public byte MembershipTypeId { get; set; }
+        public MembershipTypeDto MembershipType { get; set; }
 
         [Required]
         [StringLength(255)]
