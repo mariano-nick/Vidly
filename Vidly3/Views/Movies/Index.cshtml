@@ -12,7 +12,7 @@
 else
 {
     @Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn-primary" })
-    <table class="table table-bordered table-hover">
+    <table id="moviesTable" class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>Movies</th>
@@ -29,5 +29,17 @@ else
             }
         </tbody>       
     </table>
+}
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#moviesTable").DataTable();
+            console.log("document ready");
+        });
+
+
+
+    </script>
 }
 
