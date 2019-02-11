@@ -10,6 +10,7 @@ namespace Vidly3.Dtos
     {
         public int Id { get; set; }
         public DateTime DateAddedToDatabase { get; set; }
+        public GenreDto Genre { get; set; }
 
         [Required]
         public byte GenreId { get; set; }
