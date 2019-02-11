@@ -5,41 +5,37 @@
 }
 
 <h2>Movies</h2>
-@if (!Model.Any())
-{
-    <h3>We don't have any movies yet.</h3>
-}
-else
-{
-    @Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn-primary" })
-    <table id="moviesTable" class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Movies</th>
-                <th>Genre</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var movie in Model)
-            {
-                <tr>
-                    <td>@Html.ActionLink(movie.Name, "Edit", "Movies", new { Id = movie.Id }, null)</td>
-                    <td>@movie.Genre.Name</td>
-                </tr>
-            }
-        </tbody>       
-    </table>
-}
+@Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn-primary" })
+<table id="moviesTable" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Movies</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>       
+</table>
 @section scripts
 {
     <script>
         $(document).ready(function () {
-            $("#moviesTable").DataTable();
+            $("#moviesTable").DataTable({
+                ajax: {
+                    url: "/api/movies",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name"
+                    },
+                    {
+                        data: "genreId"
+                    }
+                ]
+            });
             console.log("document ready");
         });
-
-
-
     </script>
 }
 
